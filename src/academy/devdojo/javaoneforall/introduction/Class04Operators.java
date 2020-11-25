@@ -36,6 +36,11 @@ public class Class04Operators {
         System.out.println("isLegalOlderThanThirty "+ isLegalOlderThanThirty);
         System.out.println("isLegalYoungerThanThirty "+ isLegalYoungerThanThirty);
 
+        double currentAccount = 299;
+        double savingsAccount = 3000;
+        float playstationFivePrice = 500;
+        boolean canBeBought = currentAccount > playstationFivePrice || savingsAccount > playstationFivePrice;
+        System.out.println("canBeBought "+canBeBought);
 
     }
 }

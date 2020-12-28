@@ -6,10 +6,10 @@ public class Employee {
     public double[] salaries;
 
     public void print() {
-        System.out.println(name);
-        System.out.println(age);
-        if (salaries != null) {
-            for (double salary : salaries) {
+        System.out.println(this.name);
+        System.out.println(this.age);
+        if (this.salaries != null) {
+            for (double salary : this.salaries) {
                 System.out.print(salary + " ");
             }
         }
@@ -17,15 +17,15 @@ public class Employee {
     }
 
     public void calculateAndPrintAverageSalary() {
-        if (salaries == null) return;
+        if (this.salaries == null) return;
 
         double average = 0;
 
-        for (double salary : salaries) {
+        for (double salary : this.salaries) {
             average += salary;
         }
 
-        average /= salaries.length;
+        average /= this.salaries.length;
 
         System.out.println("\nThe average salary is " + average);
 

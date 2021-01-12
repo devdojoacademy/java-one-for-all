@@ -1,10 +1,10 @@
 package academy.devdojo.javaoneforall.javacore.Hinheritance.domain;
 
 public class Employee {
-    private String name;
-    private String socialSecurityNumber;
-    private Address address;
-    private double salary;
+    protected String name;
+    protected String socialSecurityNumber;
+    protected Address address;
+    protected double salary;
 
     public void print(){
         System.out.println(this.name);

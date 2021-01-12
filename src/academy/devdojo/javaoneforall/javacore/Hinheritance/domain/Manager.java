@@ -4,6 +4,12 @@ public class Manager extends Employee {
 
     private String department;
 
+    @Override
+    public void print(){
+        super.print();
+        System.out.println(this.department);
+    }
+
     public String getDepartment() {
         return department;
     }

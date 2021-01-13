@@ -6,11 +6,20 @@ public class Employee {
     protected Address address;
     protected double salary;
 
-    public void print(){
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    public Employee(String name, String socialSecurityNumber) {
+        this(name);
+        this.socialSecurityNumber = socialSecurityNumber;
+    }
+
+    public void print() {
         System.out.println(this.name);
         System.out.println(this.socialSecurityNumber);
         System.out.println(this.salary);
-        System.out.println(this.address.getStreet() + " "+this.getAddress().getZipcode());
+        System.out.println(this.address.getStreet() + " " + this.getAddress().getZipcode());
     }
 
     public double getSalary() {

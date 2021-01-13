@@ -6,7 +6,20 @@ public class Employee {
     protected Address address;
     protected double salary;
 
+    static {
+        System.out.println("Inside employee static init block ");
+    }
+
+    {
+        System.out.println("Inside employee init block 1 ");
+    }
+
+    {
+        System.out.println("Inside employee init block 2");
+    }
+
     public Employee(String name) {
+        System.out.println("Inside employee constructor");
         this.name = name;
     }
 

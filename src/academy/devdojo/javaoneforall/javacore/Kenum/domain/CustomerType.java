@@ -8,9 +8,18 @@ public enum CustomerType {
     private int dbValue;
     private String reportValue;
 
-    CustomerType(int dbValue, String reportValue){
+    CustomerType(int dbValue, String reportValue) {
         this.dbValue = dbValue;
         this.reportValue = reportValue;
+    }
+
+    public static CustomerType getByReportValue(String reportValue) {
+        for (CustomerType customerType : values()) {
+            if (customerType.getReportValue().equalsIgnoreCase(reportValue)) {
+                return customerType;
+            }
+        }
+        return null;
     }
 
     public String getReportValue() {

@@ -1,6 +1,6 @@
 package academy.devdojo.javaoneforall.javacore.Labstractclasses.domain;
 
-public abstract class Employee {
+public abstract class Employee extends Person {
     protected String name;
     protected double salary;
 
@@ -11,6 +11,11 @@ public abstract class Employee {
     }
 
     public abstract void calculateBonusSalary();
+
+    @Override
+    public void print() {
+        System.out.println("Printing...");
+    }
 
     @Override
     public String toString() {

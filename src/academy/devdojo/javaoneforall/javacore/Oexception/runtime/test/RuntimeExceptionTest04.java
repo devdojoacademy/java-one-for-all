@@ -8,26 +8,24 @@ public class RuntimeExceptionTest04 {
     public static void main(String[] args) {
         try {
             throw new RuntimeException();
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("Inside ArrayIndexOutOfBoundsException");
+        } catch (ArrayIndexOutOfBoundsException | IllegalArgumentException | ArithmeticException e) {
+            System.out.println("Inside ArrayIndexOutOfBoundsException  | IllegalArgumentException |ArithmeticException");
         } catch (IndexOutOfBoundsException e) {
             System.out.println("Inside IndexOutOfBoundsException");
-        } catch (IllegalArgumentException e) {
-            System.out.println("Inside IllegalArgumentException");
-        } catch (ArithmeticException e) {
-            System.out.println("Inside ArithmeticException");
         } catch (RuntimeException e) {
             System.out.println("Inside RuntimeException");
         }
 
-        try{
+        try {
             mayThrowException();
-        }catch (Exception e){
-
+        } catch (SQLException | FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
-    private static void mayThrowException() throws SQLException, FileNotFoundException{
+    private static void mayThrowException() throws SQLException, FileNotFoundException {
 
     }
 }

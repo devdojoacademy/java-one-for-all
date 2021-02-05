@@ -5,13 +5,14 @@ import academy.devdojo.javaoneforall.javacore.Oexception.exception.domain.LoginI
 import academy.devdojo.javaoneforall.javacore.Oexception.exception.domain.Person;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class OverridingWithExceptionsTest01 {
     public static void main(String[] args) {
         Person person = new Person();
         try {
             person.save();
-        } catch (LoginInvalidException | FileNotFoundException e) {
+        } catch (LoginInvalidException | IOException e) {
             e.printStackTrace();
         }
         Employee employee = new Employee();

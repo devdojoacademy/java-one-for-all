@@ -4,7 +4,7 @@ public class StringTest01 {
     public static void main(String[] args) {
         String name = "William";
         String name2 = "William";
-        name = name.concat(" Suane");
+        name = name.concat(" Suane"); // name += " Suane"
         System.out.println(name);
         System.out.println(name == name2);
         String name3 = new String("William2");

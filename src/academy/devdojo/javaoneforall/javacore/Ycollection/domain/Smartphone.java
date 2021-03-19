@@ -27,6 +27,14 @@ public class Smartphone {
         return serialNumber != null && serialNumber.equals(otherSmartphone.serialNumber);
     }
 
+    @Override
+    public String toString() {
+        return "Smartphone{" +
+                "serialNumber='" + serialNumber + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
+
     public String getSerialNumber() {
         return serialNumber;
     }

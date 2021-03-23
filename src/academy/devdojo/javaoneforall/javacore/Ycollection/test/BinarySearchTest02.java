@@ -22,7 +22,7 @@ public class BinarySearchTest02 {
             System.out.println(manga);
         }
         System.out.println("-----------------");
-        Manga mangaToSearch = new Manga(4L, "Dragon Ball Z", 89.99);
+        Manga mangaToSearch = new Manga(4L, "Aragon Ball Z", 30.99);
         System.out.println(Collections.binarySearch(mangas, mangaToSearch,mangaByTitleComparator));
     }
 }

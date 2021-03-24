@@ -6,6 +6,7 @@ public class Manga implements Comparable<Manga> {
     private Long id;
     private String title;
     private double price;
+    private int quantity;
 
     public Manga(Long id, String title, double price) {
         Objects.requireNonNull(id, "ID must not be null");
@@ -13,6 +14,11 @@ public class Manga implements Comparable<Manga> {
         this.id = id;
         this.title = title;
         this.price = price;
+    }
+
+    public Manga(Long id, String title, double price, int quantity) {
+        this(id, title, price);
+        this.quantity = quantity;
     }
 
     @Override
@@ -34,7 +40,16 @@ public class Manga implements Comparable<Manga> {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", price=" + price +
+                ", quantity=" + quantity +
                 '}';
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public Long getId() {

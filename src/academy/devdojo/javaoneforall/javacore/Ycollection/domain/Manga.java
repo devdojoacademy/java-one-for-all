@@ -1,5 +1,6 @@
 package academy.devdojo.javaoneforall.javacore.Ycollection.domain;
 
+import java.util.Comparator;
 import java.util.Objects;
 
 public class Manga implements Comparable<Manga> {
@@ -90,8 +91,8 @@ public class Manga implements Comparable<Manga> {
 //            return 1;
 //        }
 //        return this.id.compareTo(other.id);
-//        return this.title.compareTo(other.title);
-        return Double.compare(this.price, other.price);
+        return this.title.compareTo(other.title);
+//        return Double.compare(this.price, other.price);
 
     }
 }

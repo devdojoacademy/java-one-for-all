@@ -13,4 +13,8 @@ public class Car {
                 "name='" + name + '\'' +
                 '}';
     }
+
+    public String getName() {
+        return name;
+    }
 }

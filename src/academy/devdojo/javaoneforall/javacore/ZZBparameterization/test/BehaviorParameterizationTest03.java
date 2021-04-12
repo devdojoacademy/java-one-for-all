@@ -10,7 +10,7 @@ public class BehaviorParameterizationTest03 {
     private static List<Car> cars = List.of(new Car("green", 2011), new Car("black", 1998), new Car("red", 2019));
 
     public static void main(String[] args) {
-        List<Car> green = filter(cars, car -> car.getColor().equals("green"));
+        List<Car> green = filter(cars, (Car car) -> car.getColor().equals("green"));
         List<Car> red = filter(cars, car -> car.getColor().equals("red"));
         List<Car> yearBefore = filter(cars, car -> car.getYear() < 2015);
         List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);

@@ -5,8 +5,6 @@ import academy.devdojo.javaoneforall.javacore.ZZEstreams.domain.LightNovel;
 import academy.devdojo.javaoneforall.javacore.ZZEstreams.domain.Promotion;
 
 import java.util.*;
-import java.util.function.BinaryOperator;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static academy.devdojo.javaoneforall.javacore.ZZEstreams.domain.Promotion.NORMAL_PRICE;

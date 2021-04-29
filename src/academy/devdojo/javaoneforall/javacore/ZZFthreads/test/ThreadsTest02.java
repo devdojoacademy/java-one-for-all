@@ -24,7 +24,6 @@ class ThreadExampleRunnable2 implements Runnable {
     }
 }
 
-
 public class ThreadsTest02 {
     public static void main(String[] args) throws InterruptedException {
         Thread t1 = new Thread(new ThreadExampleRunnable2('A'));

@@ -3,7 +3,7 @@ package academy.devdojo.javaoneforall.javacore.ZZFthreads.test;
 import academy.devdojo.javaoneforall.javacore.ZZFthreads.domain.Account;
 
 public class ThreadAccountTest01 implements Runnable {
-    private Account account = new Account();
+    private final Account account = new Account();
 
     public static void main(String[] args) {
         ThreadAccountTest01 threadAccountTest01 = new ThreadAccountTest01();
@@ -14,12 +14,17 @@ public class ThreadAccountTest01 implements Runnable {
     }
 
     private void withdrawal(int amount) {
-        if (account.getBalance() >= amount) {
-            System.out.println(getThreadName() + " is going to withdrawal money");
-            account.withdrawal(amount);
-            System.out.println(getThreadName() + " finished withdrawing, current balance " + account.getBalance());
-        } else {
-            System.out.println("Not enough balance for " + getThreadName() + " withdrawal money");
+        System.out.println("#### outside synchronized"+getThreadName());
+
+        synchronized (account) {
+            System.out.println("**** inside synchronized"+getThreadName());
+            if (account.getBalance() >= amount) {
+                System.out.println(getThreadName() + " is going to withdrawal money");
+                account.withdrawal(amount);
+                System.out.println(getThreadName() + " finished withdrawing, current balance " + account.getBalance());
+            } else {
+                System.out.println("Not enough balance for " + getThreadName() + " withdrawal money");
+            }
         }
     }
 

@@ -13,30 +13,30 @@ class Printer implements Runnable {
 
     @Override
     public void run() {
-        System.out.printf("%s inicio: %d%n",Thread.currentThread().getName(), num);
+        System.out.printf("%s start: %d%n", Thread.currentThread().getName(), num);
         try {
             TimeUnit.SECONDS.sleep(3);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.printf("%s finalizou%n",Thread.currentThread().getName());
-
+        System.out.printf("%s finished%n", Thread.currentThread().getName());
     }
 }
-public class ExecutorsTest01 {
+
+public class ExecutorTest01 {
     public static void main(String[] args) {
-//        System.out.println(Runtime.getRuntime().availableProcessors());
-//        ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+        System.out.println(Runtime.getRuntime().availableProcessors());
+        ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
 //        ExecutorService executorService = Executors.newSingleThreadExecutor();
-        ExecutorService executorService = Executors.newCachedThreadPool();
+//        ExecutorService executorService = Executors.newCachedThreadPool();
         executorService.execute(new Printer(1));
         executorService.execute(new Printer(2));
         executorService.execute(new Printer(3));
         executorService.execute(new Printer(4));
         executorService.execute(new Printer(5));
         executorService.execute(new Printer(6));
+
         executorService.shutdown();
 
-        System.out.println("Programa finalizado");
     }
 }

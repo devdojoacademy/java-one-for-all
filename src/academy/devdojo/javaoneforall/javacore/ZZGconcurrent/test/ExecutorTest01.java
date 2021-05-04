@@ -2,6 +2,7 @@ package academy.devdojo.javaoneforall.javacore.ZZGconcurrent.test;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
 class Printer implements Runnable {
@@ -27,6 +28,7 @@ public class ExecutorTest01 {
     public static void main(String[] args) {
         System.out.println(Runtime.getRuntime().availableProcessors());
         ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
+        ThreadPoolExecutor threadPoolExecutor = (ThreadPoolExecutor) executorService;
 //        ExecutorService executorService = Executors.newSingleThreadExecutor();
 //        ExecutorService executorService = Executors.newCachedThreadPool();
         executorService.execute(new Printer(1));
@@ -35,7 +37,7 @@ public class ExecutorTest01 {
         executorService.execute(new Printer(4));
         executorService.execute(new Printer(5));
         executorService.execute(new Printer(6));
-
+        System.out.println(threadPoolExecutor.getActiveCount());
         executorService.shutdown();
 
     }

@@ -6,6 +6,7 @@ public class StoreServiceDeprecated {
 
     public double getPricesSync(String storeName) {
         System.out.printf("Getting prices sync for store %s%n", storeName);
+
         return priceGenerator();
     }
 

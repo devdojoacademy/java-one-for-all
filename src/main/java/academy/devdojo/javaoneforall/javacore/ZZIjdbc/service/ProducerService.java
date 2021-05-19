@@ -23,11 +23,17 @@ public class ProducerService {
     public static List<Producer> findAll() {
         return ProducerRepository.findAll();
     }
+
     public static List<Producer> findByName(String name) {
         return ProducerRepository.findByName(name);
     }
+
     public static void showResultSetMetaData() {
         ProducerRepository.showResultSetMetaData();
+    }
+
+    public static void showDriverMetaData() {
+        ProducerRepository.showDriverMetaData();
     }
 
     private static void requireValidId(Integer id) {

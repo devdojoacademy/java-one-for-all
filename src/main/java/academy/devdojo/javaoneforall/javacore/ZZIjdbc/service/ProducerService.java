@@ -26,6 +26,9 @@ public class ProducerService {
     public static List<Producer> findByName(String name) {
         return ProducerRepository.findByName(name);
     }
+    public static void showResultSetMetaData() {
+        ProducerRepository.showResultSetMetaData();
+    }
 
     private static void requireValidId(Integer id) {
         if (id == null || id <= 0) {

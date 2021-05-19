@@ -23,6 +23,9 @@ public class ProducerService {
     public static List<Producer> findAll() {
         return ProducerRepository.findAll();
     }
+    public static List<Producer> findByName(String name) {
+        return ProducerRepository.findByName(name);
+    }
 
     private static void requireValidId(Integer id) {
         if (id == null || id <= 0) {

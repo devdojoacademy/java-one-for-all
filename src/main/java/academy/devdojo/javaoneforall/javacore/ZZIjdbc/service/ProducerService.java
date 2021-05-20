@@ -27,6 +27,9 @@ public class ProducerService {
     public static List<Producer> findByName(String name) {
         return ProducerRepository.findByName(name);
     }
+    public static List<Producer> findByNameAndUpdateToUpperCase(String name) {
+        return ProducerRepository.findByNameAndUpdateToUpperCase(name);
+    }
 
     public static void showResultSetMetaData() {
         ProducerRepository.showResultSetMetaData();

@@ -137,6 +137,14 @@ public class ProducerRepository {
         return producers;
     }
 
+
+    private static PreparedStatement preparedStatementFindByName(Connection conn, String name) throws SQLException {
+        String sql = "SELECT * FROM anime_store.producer where name like ?;";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setString(1, String.format("%%%s%%", name));
+        return ps;
+    }
+
     public static List<Producer> findByNameCallableStatement(String name) {
         List<Producer> producers = new ArrayList<>();
         try (Connection conn = ConnectionFactory.getConnection();
@@ -164,12 +172,6 @@ public class ProducerRepository {
         return cs;
     }
 
-    private static PreparedStatement preparedStatementFindByName(Connection conn, String name) throws SQLException {
-        String sql = "SELECT * FROM anime_store.producer where name like ?;";
-        PreparedStatement ps = conn.prepareStatement(sql);
-        ps.setString(1, String.format("%%%s%%", name));
-        return ps;
-    }
 
     public static void showResultSetMetaData() {
         String sql = "SELECT * FROM anime_store.producer;";

@@ -16,7 +16,6 @@ public class ProducerService {
             case 2 -> delete();
             case 3 -> save();
             case 4 -> update();
-            default -> throw new IllegalArgumentException("Invalid option");
         }
 
     }

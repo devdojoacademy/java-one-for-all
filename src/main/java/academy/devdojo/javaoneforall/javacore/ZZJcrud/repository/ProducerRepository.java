@@ -41,4 +41,22 @@ public class ProducerRepository {
         ps.setString(1, String.format("%%%s%%", name));
         return ps;
     }
+
+    public static void delete(Integer id) {
+        log.info("Deleting producer by id '{}'", id);
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement ps = createPrepareStatementDelete(conn, id)) {
+            ps.execute();
+        } catch (SQLException e) {
+            log.error("Error trying to delete producer by id", e);
+        }
+    }
+
+
+    private static PreparedStatement createPrepareStatementDelete(Connection conn, Integer id) throws SQLException {
+        String sql = "DELETE FROM `anime_store`.`producer` WHERE (`id` = ?);";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setInt(1, id);
+        return ps;
+    }
 }

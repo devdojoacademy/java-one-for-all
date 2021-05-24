@@ -11,11 +11,9 @@ public class ProducerService {
 
     public static void menu(int op) {
         switch (op) {
-            case 1:
-                findByName();
-                break;
-            default:
-                throw new IllegalArgumentException("Invalid option");
+            case 1 -> findByName();
+            case 2 -> delete();
+            default -> throw new IllegalArgumentException("Invalid option");
         }
 
     }
@@ -24,8 +22,17 @@ public class ProducerService {
         System.out.println("Type the name or empty to list all");
         String name = SCANNER.nextLine();
         List<Producer> producers = ProducerRepository.findByName(name);
-        for (int i = 0; i < producers.size(); i++) {
-            System.out.printf("[%d] - %s%n", i, producers.get(i).getName());
+        producers.forEach(p -> System.out.printf("[%d] - %s%n", p.getId(), p.getName()));
+
+    }
+
+    private static void delete() {
+        System.out.println("Type the id of the producer you want to delete");
+        int id = Integer.parseInt(SCANNER.nextLine());
+        System.out.println("Are you sure? Y/N");
+        String choice = SCANNER.nextLine();
+        if ("y".equalsIgnoreCase(choice)) {
+            ProducerRepository.delete(id);
         }
     }
 }

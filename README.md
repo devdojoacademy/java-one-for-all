@@ -4,11 +4,23 @@ The most complete and well-structured Java course available for free. 8+ years o
 
 ### FAQ
 
-Q. Where can I watch?
+**Q. Who created?**
 
-A. Just go to [YouTube](https://www.youtube.com/watch?v=GXt46-Npz0Y&list=PL0Un1HNdB4jGKw5szJrQETqJTlZKyKReu) and hit play.
+A. This crazy dude here: https://www.linkedin.com/in/williamsuane/
 
-Q. What is covered is convered in this course?
+**Q. Who edited?**
+
+A. The brother of the crazy dude, another crazy dude: https://www.linkedin.com/in/wildneisuane/
+
+**Q. Where can I watch?**
+
+A. Just go this [YouTube Playlist](https://www.youtube.com/watch?v=GXt46-Npz0Y&list=PL0Un1HNdB4jGKw5szJrQETqJTlZKyKReu) and hit play.
+
+**Q. What if I speak Portuguese?**
+
+A. Just go to this other [YouTube Playlist](https://www.youtube.com/watch?v=VKjFuX91G5Q&list=PL62G310vn6nFIsOCC0H-C2infYgwm8SWW) and hit play.
+
+**Q. What is covered is convered in this course?**
 
 A. Glad you asked:
 
